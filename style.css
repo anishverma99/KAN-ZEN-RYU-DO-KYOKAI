@@ -1,0 +1,1633 @@
+/* ==========================================================
+            KAN ZEN RYU KARATE-DO KYOKAI
+                 OFFICIAL WEBSITE CSS
+              Developed by Anish Kumar
+========================================================== */
+
+
+/* ==========================================================
+                    GOOGLE FONTS
+========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+/* ==========================================================
+                      CSS RESET
+========================================================== */
+
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+/* ==========================================================
+                    ROOT VARIABLES
+========================================================== */
+
+:root{
+
+    --primary:#b30000;
+    --primary-dark:#7d0000;
+
+    --secondary:#d4af37;
+
+    --black:#050505;
+    --black-light:#101010;
+
+    --white:#ffffff;
+
+    --gray:#9b9b9b;
+
+    --light:#f4f4f4;
+
+    --glass:rgba(255,255,255,.08);
+
+    --border:rgba(255,255,255,.15);
+
+    --shadow:0 15px 40px rgba(0,0,0,.45);
+
+    --red-glow:0 0 20px rgba(179,0,0,.6);
+
+    --gold-glow:0 0 18px rgba(212,175,55,.45);
+
+    --transition:.45s ease;
+
+    --radius:18px;
+
+    --max-width:1350px;
+
+}
+
+
+/* ==========================================================
+                SMOOTH SCROLLING
+========================================================== */
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+
+/* ==========================================================
+                     BODY
+========================================================== */
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:var(--black);
+
+    color:var(--white);
+
+    overflow-x:hidden;
+
+    line-height:1.7;
+
+}
+
+
+/* ==========================================================
+                 GLOBAL IMAGES
+========================================================== */
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+
+/* ==========================================================
+                  LINKS
+========================================================== */
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+
+/* ==========================================================
+                  LISTS
+========================================================== */
+
+ul{
+
+    list-style:none;
+
+}
+
+
+/* ==========================================================
+                  BUTTONS
+========================================================== */
+
+button{
+
+    border:none;
+
+    outline:none;
+
+    cursor:pointer;
+
+    font-family:inherit;
+
+}
+
+
+/* ==========================================================
+                 INPUTS
+========================================================== */
+
+input,
+textarea{
+
+    font-family:inherit;
+
+    outline:none;
+
+}
+
+
+/* ==========================================================
+                  CONTAINER
+========================================================== */
+
+.container{
+
+    width:92%;
+
+    max-width:var(--max-width);
+
+    margin:auto;
+
+}
+
+
+/* ==========================================================
+                  SECTION SPACING
+========================================================== */
+
+section{
+
+    padding:110px 0;
+
+    position:relative;
+
+}
+
+
+/* ==========================================================
+               SECTION TITLE
+========================================================== */
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+.section-subtitle{
+
+    color:var(--secondary);
+
+    font-size:15px;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    display:block;
+
+    margin-bottom:15px;
+
+}
+
+.section-title h2{
+
+    font-family:'Cinzel',serif;
+
+    font-size:48px;
+
+    line-height:1.2;
+
+    margin-bottom:20px;
+
+}
+
+.section-title p{
+
+    max-width:720px;
+
+    margin:auto;
+
+    color:var(--gray);
+
+}
+
+
+/* ==========================================================
+                 RED LINE
+========================================================== */
+
+.title-line{
+
+    width:90px;
+
+    height:4px;
+
+    background:linear-gradient(to right,
+    var(--secondary),
+    var(--primary));
+
+    margin:22px auto;
+
+    border-radius:100px;
+
+}
+
+
+/* ==========================================================
+                PRIMARY BUTTON
+========================================================== */
+
+.primary-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:15px 40px;
+
+    background:linear-gradient(135deg,
+    var(--primary),
+    var(--primary-dark));
+
+    color:#fff;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+    position:relative;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+}
+
+.primary-btn:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:var(--red-glow);
+
+}
+
+
+/* ==========================================================
+                SECONDARY BUTTON
+========================================================== */
+
+.secondary-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:15px 40px;
+
+    border:2px solid var(--secondary);
+
+    border-radius:50px;
+
+    color:var(--secondary);
+
+    transition:var(--transition);
+
+}
+
+.secondary-btn:hover{
+
+    background:var(--secondary);
+
+    color:#000;
+
+}
+
+
+/* ==========================================================
+                  CUSTOM SCROLLBAR
+========================================================== */
+
+::-webkit-scrollbar{
+
+    width:12px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#111;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:linear-gradient(
+    var(--primary),
+    var(--secondary));
+
+    border-radius:50px;
+
+}
+
+
+/* ==========================================================
+                 TEXT SELECTION
+========================================================== */
+
+::selection{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+
+/* ==========================================================
+                GLASS CARD
+========================================================== */
+
+.glass{
+
+    background:var(--glass);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius);
+
+}
+
+
+/* ==========================================================
+             FADE ANIMATION CLASS
+========================================================== */
+
+.fade-up{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+}
+
+
+/* ==========================================================
+                END OF PART 2A.1
+========================================================== */
+/* ==========================================================
+                    PART 2A.2
+              PREMIUM NAVIGATION BAR
+========================================================== */
+
+/* =========================
+        HEADER
+========================= */
+
+header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:9999;
+
+    transition:all .45s ease;
+
+    padding:18px 0;
+
+}
+
+/* Added by JS when page scrolls */
+
+header.scrolled{
+
+    background:rgba(5,5,5,.88);
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:0 8px 30px rgba(0,0,0,.45);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    padding:12px 0;
+
+}
+
+/* =========================
+     NAV CONTAINER
+========================= */
+
+.navbar{
+
+    width:92%;
+
+    max-width:1350px;
+
+    margin:auto;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+}
+
+/* =========================
+         LOGO
+========================= */
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.logo img{
+
+    width:70px;
+
+    transition:.5s;
+
+    filter:drop-shadow(0 0 15px rgba(179,0,0,.45));
+
+}
+
+header.scrolled .logo img{
+
+    width:58px;
+
+}
+
+.logo-text{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.logo-text h2{
+
+    font-family:'Cinzel',serif;
+
+    font-size:24px;
+
+    letter-spacing:2px;
+
+    color:#fff;
+
+}
+
+.logo-text span{
+
+    font-size:12px;
+
+    color:var(--secondary);
+
+    letter-spacing:2px;
+
+}
+
+/* =========================
+      NAVIGATION LINKS
+========================= */
+
+.nav-links{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:35px;
+
+}
+
+.nav-links li{
+
+    position:relative;
+
+}
+
+.nav-links a{
+
+    color:#fff;
+
+    font-weight:500;
+
+    transition:.35s;
+
+    position:relative;
+
+    letter-spacing:.5px;
+
+}
+
+/* Animated underline */
+
+.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    background:linear-gradient(
+        to right,
+        var(--secondary),
+        var(--primary)
+    );
+
+    transition:.4s;
+
+}
+
+.nav-links a:hover{
+
+    color:var(--secondary);
+
+}
+
+.nav-links a:hover::after{
+
+    width:100%;
+
+}
+
+/* =========================
+     ACTIVE NAVIGATION
+========================= */
+
+.nav-links a.active{
+
+    color:var(--secondary);
+
+}
+
+.nav-links a.active::after{
+
+    width:100%;
+
+}
+
+/* =========================
+       NAV BUTTON
+========================= */
+
+.nav-btn{
+
+    margin-left:25px;
+
+}
+
+.nav-btn a{
+
+    padding:13px 28px;
+
+    border-radius:40px;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--primary-dark)
+    );
+
+    color:#fff;
+
+    font-weight:600;
+
+    transition:.4s;
+
+    box-shadow:0 8px 25px rgba(179,0,0,.35);
+
+}
+
+.nav-btn a:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 0 25px rgba(179,0,0,.65);
+
+}
+
+/* =========================
+     HAMBURGER BUTTON
+========================= */
+
+.menu-toggle{
+
+    display:none;
+
+    width:48px;
+
+    height:48px;
+
+    cursor:pointer;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(15px);
+
+    justify-content:center;
+
+    align-items:center;
+
+    transition:.4s;
+
+}
+
+.menu-toggle:hover{
+
+    background:var(--primary);
+
+}
+
+.menu-toggle i{
+
+    color:#fff;
+
+    font-size:22px;
+
+}
+
+/* =========================
+      NAV ANIMATION
+========================= */
+
+@keyframes logoGlow{
+
+    0%{
+
+        filter:drop-shadow(0 0 6px rgba(179,0,0,.2));
+
+    }
+
+    50%{
+
+        filter:drop-shadow(0 0 22px rgba(179,0,0,.8));
+
+    }
+
+    100%{
+
+        filter:drop-shadow(0 0 6px rgba(179,0,0,.2));
+
+    }
+
+}
+
+.logo img{
+
+    animation:logoGlow 3s infinite;
+
+}
+
+/* =========================
+      NAV HOVER EFFECT
+========================= */
+
+.nav-links li{
+
+    transition:.35s;
+
+}
+
+.nav-links li:hover{
+
+    transform:translateY(-2px);
+
+}
+
+/* ==========================================================
+              END OF PART 2A.2
+========================================================== */
+/* ==========================================================
+                    PART 2A.3
+              PREMIUM KARATE LOADER
+========================================================== */
+
+/* =========================
+        LOADER
+========================= */
+
+.loader{
+
+    position:fixed;
+
+    inset:0;
+
+    width:100%;
+
+    height:100vh;
+
+    background:#000;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:999999;
+
+    overflow:hidden;
+
+    transition:1s ease;
+
+}
+
+/* Hide loader */
+
+.loader.hide{
+
+    opacity:0;
+
+    visibility:hidden;
+
+    pointer-events:none;
+
+}
+
+/* =========================
+      LOADER CONTENT
+========================= */
+
+.loader-content{
+
+    position:relative;
+
+    text-align:center;
+
+    z-index:5;
+
+}
+
+/* =========================
+         LOGO
+========================= */
+
+.loader-logo{
+
+    width:180px;
+
+    margin:0 auto 30px;
+
+    animation:logoPulse 2.5s infinite;
+
+}
+
+/* =========================
+        TITLE
+========================= */
+
+.loader-title{
+
+    font-family:'Cinzel',serif;
+
+    font-size:42px;
+
+    color:#fff;
+
+    letter-spacing:5px;
+
+    margin-bottom:15px;
+
+}
+
+.loader-subtitle{
+
+    color:var(--secondary);
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    font-size:14px;
+
+}
+
+/* =========================
+      PROGRESS BAR
+========================= */
+
+.loader-progress{
+
+    width:320px;
+
+    height:8px;
+
+    background:#222;
+
+    border-radius:50px;
+
+    overflow:hidden;
+
+    margin:40px auto 20px;
+
+}
+
+.loader-progress span{
+
+    display:block;
+
+    width:0;
+
+    height:100%;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    animation:loadingBar 3s forwards;
+
+}
+
+/* =========================
+     LOADING TEXT
+========================= */
+
+.loading-text{
+
+    font-size:14px;
+
+    color:#ccc;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+}
+
+/* =========================
+       RED GLOW
+========================= */
+
+.loader-glow{
+
+    position:absolute;
+
+    width:450px;
+
+    height:450px;
+
+    border-radius:50%;
+
+    background:radial-gradient(
+        rgba(179,0,0,.55),
+        transparent 70%
+    );
+
+    filter:blur(80px);
+
+    animation:glowPulse 4s infinite;
+
+}
+
+/* =========================
+       JAPANESE CIRCLE
+========================= */
+
+.loader-circle{
+
+    position:absolute;
+
+    width:520px;
+
+    height:520px;
+
+    border:2px solid rgba(255,255,255,.08);
+
+    border-radius:50%;
+
+    animation:rotateCircle 20s linear infinite;
+
+}
+
+/* =========================
+         SMOKE
+========================= */
+
+.loader-smoke{
+
+    position:absolute;
+
+    width:700px;
+
+    height:700px;
+
+    border-radius:50%;
+
+    background:radial-gradient(
+
+        rgba(255,255,255,.06),
+
+        transparent 75%
+
+    );
+
+    filter:blur(70px);
+
+    animation:smokeMove 8s ease-in-out infinite;
+
+}
+
+/* =========================
+      FLOATING PARTICLES
+========================= */
+
+.loader span.particle{
+
+    position:absolute;
+
+    width:6px;
+
+    height:6px;
+
+    background:var(--secondary);
+
+    border-radius:50%;
+
+    animation:particleMove 7s linear infinite;
+
+}
+
+/* =========================
+      KEYFRAMES
+========================= */
+
+@keyframes loadingBar{
+
+    from{
+
+        width:0;
+
+    }
+
+    to{
+
+        width:100%;
+
+    }
+
+}
+
+@keyframes logoPulse{
+
+    0%{
+
+        transform:scale(.95);
+
+        filter:drop-shadow(0 0 10px rgba(179,0,0,.2));
+
+    }
+
+    50%{
+
+        transform:scale(1);
+
+        filter:drop-shadow(0 0 35px rgba(179,0,0,.9));
+
+    }
+
+    100%{
+
+        transform:scale(.95);
+
+        filter:drop-shadow(0 0 10px rgba(179,0,0,.2));
+
+    }
+
+}
+
+@keyframes glowPulse{
+
+    0%{
+
+        transform:scale(.9);
+
+        opacity:.4;
+
+    }
+
+    50%{
+
+        transform:scale(1.2);
+
+        opacity:.9;
+
+    }
+
+    100%{
+
+        transform:scale(.9);
+
+        opacity:.4;
+
+    }
+
+}
+
+@keyframes rotateCircle{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+@keyframes smokeMove{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-35px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes particleMove{
+
+    0%{
+
+        transform:translateY(120px);
+
+        opacity:0;
+
+    }
+
+    20%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:translateY(-700px);
+
+        opacity:0;
+
+    }
+
+}
+
+/* =========================
+     LOADING PERCENTAGE
+========================= */
+
+.loader-percent{
+
+    font-size:22px;
+
+    color:var(--white);
+
+    font-weight:700;
+
+    margin-top:15px;
+
+    letter-spacing:2px;
+
+}
+
+/* =========================
+     KARATE SILHOUETTE
+========================= */
+
+.loader-karate{
+
+    position:absolute;
+
+    bottom:60px;
+
+    right:60px;
+
+    width:220px;
+
+    opacity:.18;
+
+    animation:kickMove 3s ease-in-out infinite;
+
+}
+
+@keyframes kickMove{
+
+    0%{
+
+        transform:translateX(0);
+
+    }
+
+    50%{
+
+        transform:translateX(-15px)
+                   rotate(-4deg);
+
+    }
+
+    100%{
+
+        transform:translateX(0);
+
+    }
+
+}
+
+/* ==========================================================
+                END OF PART 2A.3
+========================================================== */
+/* ==========================================================
+                    PART 2B.1
+                 HERO SECTION
+========================================================== */
+
+.hero{
+
+    position:relative;
+
+    width:100%;
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    background:#000;
+
+}
+
+/* =========================
+      HERO VIDEO
+========================= */
+
+.hero video{
+
+    position:absolute;
+
+    top:50%;
+
+    left:50%;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transform:translate(-50%,-50%);
+
+    z-index:1;
+
+}
+
+/* =========================
+        DARK OVERLAY
+========================= */
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+
+        rgba(0,0,0,.82),
+
+        rgba(0,0,0,.72),
+
+        rgba(0,0,0,.90)
+
+    );
+
+    z-index:2;
+
+}
+
+/* =========================
+       RED GLOW
+========================= */
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:700px;
+
+    height:700px;
+
+    background:radial-gradient(
+
+        rgba(179,0,0,.35),
+
+        transparent 70%
+
+    );
+
+    border-radius:50%;
+
+    filter:blur(100px);
+
+    animation:heroGlow 5s infinite;
+
+    z-index:2;
+
+}
+
+/* =========================
+      HERO CONTENT
+========================= */
+
+.hero-content{
+
+    position:relative;
+
+    z-index:5;
+
+    text-align:center;
+
+    width:90%;
+
+    max-width:1100px;
+
+}
+
+/* =========================
+         LOGO
+========================= */
+
+.hero-logo{
+
+    width:170px;
+
+    margin:0 auto 35px;
+
+    animation:logoFloat 4s ease-in-out infinite;
+
+}
+
+/* =========================
+        SUBTITLE
+========================= */
+
+.hero-content span{
+
+    display:block;
+
+    color:var(--secondary);
+
+    letter-spacing:5px;
+
+    font-size:16px;
+
+    margin-bottom:20px;
+
+    text-transform:uppercase;
+
+}
+
+/* =========================
+         TITLE
+========================= */
+
+.hero-content h1{
+
+    font-family:'Cinzel',serif;
+
+    font-size:72px;
+
+    line-height:1.15;
+
+    color:#fff;
+
+    margin-bottom:25px;
+
+    text-shadow:0 0 35px rgba(179,0,0,.45);
+
+}
+
+/* =========================
+       DESCRIPTION
+========================= */
+
+.hero-content p{
+
+    max-width:850px;
+
+    margin:auto;
+
+    color:#ddd;
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    margin-bottom:45px;
+
+}
+
+/* =========================
+      HERO BUTTONS
+========================= */
+
+.hero-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+
+}
+
+/* =========================
+      HERO STATS
+========================= */
+
+.hero-stats{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:40px;
+
+    margin-top:70px;
+
+    flex-wrap:wrap;
+
+}
+
+.hero-stat{
+
+    min-width:180px;
+
+    padding:22px;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:18px;
+
+    transition:.4s;
+
+}
+
+.hero-stat:hover{
+
+    transform:translateY(-8px);
+
+    border-color:var(--secondary);
+
+    box-shadow:0 0 30px rgba(212,175,55,.18);
+
+}
+
+.hero-stat h2{
+
+    font-size:42px;
+
+    color:var(--secondary);
+
+    margin-bottom:10px;
+
+}
+
+.hero-stat p{
+
+    margin:0;
+
+    font-size:15px;
+
+    color:#ccc;
+
+}
+
+/* =========================
+     SCROLL INDICATOR
+========================= */
+
+.scroll-indicator{
+
+    position:absolute;
+
+    bottom:35px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    z-index:20;
+
+}
+
+.scroll-indicator span{
+
+    display:block;
+
+    width:34px;
+
+    height:58px;
+
+    border:2px solid #fff;
+
+    border-radius:30px;
+
+    position:relative;
+
+}
+
+.scroll-indicator span::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:7px;
+
+    height:7px;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    left:50%;
+
+    top:12px;
+
+    transform:translateX(-50%);
+
+    animation:scrollMove 2s infinite;
+
+}
+
+/* =========================
+      KEYFRAMES
+========================= */
+
+@keyframes heroGlow{
+
+    0%{
+
+        transform:scale(.9);
+
+        opacity:.4;
+
+    }
+
+    50%{
+
+        transform:scale(1.15);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:scale(.9);
+
+        opacity:.4;
+
+    }
+
+}
+
+@keyframes logoFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes scrollMove{
+
+    0%{
+
+        opacity:1;
+
+        top:10px;
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        top:35px;
+
+    }
+
+}
+
+/* ==========================================================
+                END OF PART 2B.1
+========================================================== */
