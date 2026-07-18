@@ -329,10 +329,88 @@ function initializeHero(){
 
 }
 
+/* ==========================================================
+                    PART 3C.1
+              PREMIUM COUNTER ANIMATION
+========================================================== */
+
 function initializeCounters(){
 
-    // Part 3C.1
+    const counters = document.querySelectorAll("[data-counter]");
 
+    if(!counters.length) return;
+
+    const observer = new IntersectionObserver((entries)=>{
+
+        entries.forEach(entry=>{
+
+            if(entry.isIntersecting){
+
+                animateCounter(entry.target);
+
+                observer.unobserve(entry.target);
+
+            }
+
+        });
+
+    },{
+
+        threshold:0.5
+
+    });
+
+    counters.forEach(counter=>{
+
+        observer.observe(counter);
+
+    });
+
+}
+
+/* ==========================================================
+                COUNTER ANIMATION
+========================================================== */
+
+function animateCounter(counter){
+
+    const target = Number(counter.dataset.counter);
+
+    const suffix = counter.dataset.suffix || "";
+
+    const duration = 2000;
+
+    const startTime = performance.now();
+
+    function update(currentTime){
+
+        const progress = Math.min((currentTime-startTime)/duration,1);
+
+        const eased = 1-Math.pow(1-progress,3);
+
+        const value = Math.floor(eased*target);
+
+        counter.textContent = value + suffix;
+
+        if(progress<1){
+
+            requestAnimationFrame(update);
+
+        }else{
+
+            counter.textContent = target + suffix;
+
+        }
+
+    }
+
+    requestAnimationFrame(update);
+
+}
+
+/* ==========================================================
+                END PART 3C.1
+========================================================== */
 }
 
 function initializeGallery(){
